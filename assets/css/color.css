@@ -1,0 +1,16 @@
+/*:root{
+	--primary-color: #4bffa5;
+	--white: #ffffff;
+	--black: #000000;
+	--dark1: #0d0d17;
+	--dark2: #12121e;
+}
+.primary_color{
+	color: var(--primary-color);
+}
+
+
+
+.slider-one{
+	background-color: var(--dark1);
+}*/

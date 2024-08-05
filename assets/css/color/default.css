@@ -1,0 +1,68 @@
+:root{
+	--primary-color: #4bffa5;
+	--secondary-color: #141414;
+	--background: #100027;
+	--white: #fff;
+    --dark: #000;
+    --pc5: rgb(var(--primary-color) var(--primary-color) var(--primary-color)  / 50%);
+}
+
+
+.header.header-light .header-above-info{
+    background-color: var(--white);
+}
+.header.header-dark .header-above-info{
+    background-color: var(--secondary-color);
+}
+
+.header-above-info {
+    background-color: var(--secondary-color);
+}
+
+
+
+.btn-primary {
+    color: #141414;
+    background-color: var(--primary-color);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    color: var(--primary-color);
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+} 
+
+.main-navigation ul li a{
+	color:var(--secondary-color);
+} 
+.navigation-area {
+    background-color: var(--primary-color);
+}
+span.slider-title {
+    background-color: var(--primary-color);
+	color:var(--secondary-color);
+}
+
+span.slider-sub-title {
+    color: var(--primary-color);
+}
+
+.abover-footer{
+   background-color: var(--primary-color);
+	color:var(--secondary-color);
+}
+
+.header-2 .main-navigation ul li a {
+    color: #fff;
+}
+
+.header-3 .header-above-info {
+    background-color:var(--primary-color);
+}
+
+.breadcrumb-heading {
+    color: var(--primary-color);
+}
+ol.breadcrumb-list li a:hover {
+        color: var(--primary-color);
+}
