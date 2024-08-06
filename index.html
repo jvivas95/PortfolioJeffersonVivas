@@ -1,49 +1,73 @@
-<?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package evita
- */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Programador Junior</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-get_header(); 
-?>
-<section class="section-blog blog-one white blog_default">
-	<div class="nt-container">
-		<div class="nt-columns-area">	
-				<div class="nt-column-8">				
-					<?php 
-						$evita_paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-						$args = array( 'post_type' => 'post','paged'=>$evita_paged );	
-					?>
-					<div class="nt-columns-area">
-					<?php if( have_posts() ): ?>
-						<?php while( have_posts() ) : the_post();  ?>
-						<div class="nt-column-12 nt-sm-column-6">
-							<?php get_template_part('template-parts/content/content','page'); ?>
-						</div>
-						<?php endwhile; ?>
-					<?php endif; ?>		
-					</div>
-						<!-- Pagination -->
-							<?php								
-							// Previous/next page navigation.
-							the_posts_pagination( array(
-							'prev_text'          => ' <i class="fa fa-chevron-left"></i>',
-							'next_text'          => '<i class="fa fa-chevron-right"></i>',
-							) ); ?>
-					<!-- Pagination -->	
-					
-					<?php //endif; ?>
-				</div>
-				<?php  get_sidebar(); ?>
-		</div>
-	</div>
-</section>
-<?php get_footer(); ?>
+    <main>
+        <section id="about">
+            <h1>Sobre mí</h1>
+            <p>Soy un programador junior apasionado por la tecnología y el desarrollo de software. Me especializo en el desarrollo web utilizando tecnologías como HTML, CSS, JavaScript, y frameworks modernos como React y Node.js.</p>
+        </section>
+
+        <section id="projects">
+            <h1>Proyectos</h1>
+            <div class="project">
+                <h2>Proyecto 1</h2>
+                <p>Descripción del proyecto 1...</p>
+            </div>
+            <div class="project">
+                <h2>Proyecto 2</h2>
+                <p>Descripción del proyecto 2...</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1>Habilidades</h1>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h1>Contacto</h1>
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portafolio de Programador Junior</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
