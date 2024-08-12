@@ -9,17 +9,37 @@ body {
 
 /* Header and navigation */
 header {
-    padding: 10px 0;
+    padding: 10px 20px;
+    margin:1rem;
 }
 
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block; /* Ajusta el tamaño del contenedor al tamaño del contenido (la imagen) */
+}
+
+.logo img {
+    display: block; /* Elimina el espacio inferior de la imagen y asegura que el contenedor se ajuste */
+    max-height: 60px; /* Ajusta el tamaño máximo de la imagen según sea necesario */
+    width: auto;
+}
+
+/* Centrado de la lista de navegación */
 nav ul {
+    display: flex;
     list-style: none;
-    text-align: center;
+    margin: 0 auto;
     padding: 0;
+    justify-content: center;
+    flex-grow: 1; /* Esto centrará la lista en el espacio restante */
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -30,14 +50,27 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #1abc9c00; /* Greenish tone */
+    color: #1abc9c; /* Greenish tone */
 }
 
-.logo img {
-    height: auto;
-    max-height: 60px; /* Adjust this value as needed */
-    width: auto;
-    max-width: 100%;
+/* Responsive */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
 
 /* Sections */
@@ -45,7 +78,9 @@ section {
     padding: 40px 20px;
     text-align: center;
 }
-
+#profilePic img {
+    border-radius: 50rem;
+}
 h1 {
     margin-bottom: 20px;
     font-size: 2em;
