@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #242438;
+    background-color: black;
     color: #ffffff;
 }
 
@@ -25,8 +25,8 @@ header nav {
 
 .logo img {
     display: block; /* Elimina el espacio inferior de la imagen y asegura que el contenedor se ajuste */
-    max-height: 60px; /* Ajusta el tamaño máximo de la imagen según sea necesario */
-    width: auto;
+    width:50%;
+    
 }
 
 /* Centrado de la lista de navegación */
@@ -80,7 +80,31 @@ section {
 }
 #profilePic img {
     border-radius: 50rem;
+
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    animation: shadow-move 12s infinite alternate;
 }
+
+@keyframes shadow-move{
+    0% {
+        filter: drop-shadow(0 0 14px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 14px rgba(255, 0, 0, 0.6));
+    }
+    25% {
+        filter: drop-shadow(0 0 14px rgba(255, 0, 255, 0.8)) drop-shadow(0 0 14px rgba(255, 0, 255, 0.6));
+    }
+    50% {
+        filter: drop-shadow(0 0 14px rgba(0, 0, 255, 0.8)) drop-shadow(0 0 14px rgba(0, 0, 255, 0.6));
+    }
+    75% {
+        filter: drop-shadow(0 0 14px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 14px rgba(0, 255, 255, 0.6));
+    }
+    100% {
+        filter: drop-shadow(0 0 14px rgba(0, 255, 0, 0.8)) drop-shadow(0 0 40px rgba(0, 255, 0, 0.6));
+    }
+}
+
 h1 {
     margin-bottom: 20px;
     font-size: 2em;
