@@ -37,7 +37,6 @@ nav ul {
     list-style: none;
     justify-content: center;
     flex-grow: 1;
-    position: absolute; /* Añadido para permitir el uso de z-index */
     z-index: 2; /* Menú por encima del logo */
 }
 
