@@ -23,7 +23,7 @@ header nav {
 
 .logo {
     flex-shrink: 0;
-    position: relative; /* Añadido para permitir el uso de z-index */
+    position: absolute; /* Añadido para permitir el uso de z-index */
     z-index: 1; /* Logo en un nivel inferior */
 }
 
@@ -37,11 +37,9 @@ header nav {
 nav ul {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     justify-content: center;
     flex-grow: 1;
-    position: relative; /* Añadido para permitir el uso de z-index */
+    position: absolute; /* Añadido para permitir el uso de z-index */
     z-index: 2; /* Menú por encima del logo */
 }
 
