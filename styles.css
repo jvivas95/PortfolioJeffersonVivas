@@ -16,11 +16,15 @@ header {
 header nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Cambiado a center para centrar mejor */
+    position: relative; /* Añadido para permitir el uso de z-index */
 }
 
+
 .logo {
-    display: inline-block; /* Ajusta el tamaño del contenedor al tamaño del contenido (la imagen) */
+    flex-shrink: 0;
+    position: relative; /* Añadido para permitir el uso de z-index */
+    z-index: 1; /* Logo en un nivel inferior */
 }
 
 .logo img {
@@ -33,10 +37,12 @@ header nav {
 nav ul {
     display: flex;
     list-style: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     justify-content: center;
-    flex-grow: 1; /* Esto centrará la lista en el espacio restante */
+    flex-grow: 1;
+    position: relative; /* Añadido para permitir el uso de z-index */
+    z-index: 2; /* Menú por encima del logo */
 }
 
 nav ul li {
