@@ -15,8 +15,6 @@ header {
 
 header nav {
     display: flex;
-    align-items: center;
-    justify-content: center; /* Cambiado a center para centrar mejor */
     position: relative; /* Añadido para permitir el uso de z-index */
 }
 
