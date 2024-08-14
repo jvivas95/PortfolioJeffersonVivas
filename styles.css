@@ -1,186 +1,200 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #ffffff;
 }
 
 /* Header and navigation */
 header {
-    padding: 10px 20px;
-    margin:1rem;
+  padding: 10px 20px;
+  margin: 1rem;
 }
 
 header nav {
-    display: flex;
-    position: relative; /* Añadido para permitir el uso de z-index */
+  display: flex;
+  position: relative; /* Añadido para permitir el uso de z-index */
+  align-items: center;
 }
 
-
 .logo {
-    flex-shrink: 0;
-    position: absolute; /* Añadido para permitir el uso de z-index */
-    z-index: 1; /* Logo en un nivel inferior */
+  flex-shrink: 0;
+  position: absolute; /* Añadido para permitir el uso de z-index */
+  z-index: 1; /* Logo en un nivel inferior */
 }
 
 .logo img {
-    display: block; /* Elimina el espacio inferior de la imagen y asegura que el contenedor se ajuste */
-    width:50%;
-    
+  display: block; /* Elimina el espacio inferior de la imagen y asegura que el contenedor se ajuste */
+  width: 50%;
 }
 
 /* Centrado de la lista de navegación */
 nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    flex-grow: 1;
-    z-index: 2; /* Menú por encima del logo */
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-grow: 1;
+  z-index: 2; /* Menú por encima del logo */
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2em;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
 nav ul li a:hover {
-    color: #1abc9c; /* Greenish tone */
+  color: #1abc9c; /* Greenish tone */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-    }
+  header nav {
+    flex-direction: column;
+  }
 
-    .logo {
-        margin-bottom: 10px;
-    }
+  .logo {
+    margin-bottom: 10px;
+  }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    nav ul li {
-        margin: 10px 0;
-    }
+  nav ul li {
+    margin: 10px 0;
+  }
 }
 
 /* Sections */
 section {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 #profilePic img {
-    border-radius: 50rem;
+  border-radius: 50rem;
 
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    animation: shadow-move 12s infinite alternate;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  animation: shadow-move 12s infinite alternate;
 }
 
-@keyframes shadow-move{
-    0% {
-        filter: drop-shadow(0 0 14px rgba(255, 0, 0, 0.8)) drop-shadow(0 0 14px rgba(255, 0, 0, 0.6));
-    }
-    25% {
-        filter: drop-shadow(0 0 14px rgba(255, 0, 255, 0.8)) drop-shadow(0 0 14px rgba(255, 0, 255, 0.6));
-    }
-    50% {
-        filter: drop-shadow(0 0 14px rgba(0, 0, 255, 0.8)) drop-shadow(0 0 14px rgba(0, 0, 255, 0.6));
-    }
-    75% {
-        filter: drop-shadow(0 0 14px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 14px rgba(0, 255, 255, 0.6));
-    }
-    100% {
-        filter: drop-shadow(0 0 14px rgba(0, 255, 0, 0.8)) drop-shadow(0 0 40px rgba(0, 255, 0, 0.6));
-    }
+@keyframes shadow-move {
+  0% {
+    filter: drop-shadow(0 0 14px rgba(255, 0, 0, 0.8))
+      drop-shadow(0 0 14px rgba(255, 0, 0, 0.6));
+  }
+  25% {
+    filter: drop-shadow(0 0 14px rgba(255, 0, 255, 0.8))
+      drop-shadow(0 0 14px rgba(255, 0, 255, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(0, 0, 255, 0.8))
+      drop-shadow(0 0 14px rgba(0, 0, 255, 0.6));
+  }
+  75% {
+    filter: drop-shadow(0 0 14px rgba(0, 255, 255, 0.8))
+      drop-shadow(0 0 14px rgba(0, 255, 255, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 14px rgba(0, 255, 0, 0.8))
+      drop-shadow(0 0 40px rgba(0, 255, 0, 0.6));
+  }
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #1abc9c; /* Greenish tone */
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #1abc9c; /* Greenish tone */
 }
-
-p, ul, form {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+section,
+p,
+b{
+    color: aqua;
 }
-
+p,
+ul,
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+    
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 ul li {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* Projects */
 .project {
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
 }
 
 /* Contact form */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form label {
-    margin-top: 10px;
-    font-weight: bold;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-form input, form textarea, form button {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+form input,
+form textarea,
+form button {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 form button {
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 /* Footer */
 footer {
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 
-    form input, form textarea, form button {
-        max-width: 100%;
-    }
+  form input,
+  form textarea,
+  form button {
+    max-width: 100%;
+  }
 }
