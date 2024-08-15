@@ -115,10 +115,9 @@ h1 {
   font-size: 2em;
   color: #1abc9c; /* Greenish tone */
 }
-section,
-p,
-b{
-    color: aqua;
+#about b {
+  /* Controla las negritas de la sección "about"*/
+  color: rgb(0, 174, 255);
 }
 p,
 ul,
@@ -127,7 +126,7 @@ form {
   margin: 0 auto;
   line-height: 1.6;
 }
-    
+
 ul {
   list-style-type: none;
   padding: 0;
